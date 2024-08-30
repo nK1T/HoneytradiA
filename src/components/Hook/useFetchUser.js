@@ -9,11 +9,13 @@ const useFetchUser = () => {
   const fetchUser = useCallback(async () => {
     setLoading(true);
     try {
-      const response = await axios.get(`${import.meta.env.VITE_API_URL}/me`, {
+      const {data} = await axios.get(`${import.meta.env.VITE_API_URL}/me`, {
         withCredentials: true,
       });
-      setUser(response.data.user);
-      setIsAuthorized(true);
+      if(data.admin.role === "admin"){
+        setUser(data.user);
+        setIsAuthorized(true);
+      }
     } catch (error) {
       setIsAuthorized(false);
       console.log(error);
