@@ -1,0 +1,88 @@
+// @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;200;300;400;500;600;700;800&display=swap");
+// @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+// $bg:#222831;
+$lightBG: #0d0d0d;
+$darkBG: #080907;
+$bg: #080907;
+$lbg: #191919;
+$text: #f7fcfc;
+$stext: #ccd6fc;
+$ltext: #f6f6f4;
+$purple: #892cdc;
+$lpurple: #bc6ff1;
+$llpurple: #d9acf5;
+
+$greyBlue: hsl(237, 18%, 59%);
+$red: hsl(345, 95%, 68%);
+$topRed: hsl(345, 62%, 57%);
+$white: #ccd6fc;
+
+$desatBlue: hsl(236, 21%, 26%);
+$vDarkBlue: rgb(30, 31, 41);
+$vvDarkBlue: rgb(25, 26, 36);
+
+$top-card: rgb(44, 44, 68);
+// $lightBG: #0d0d0d;
+$darkBG: #080907;
+
+$box-shadow: 0 7px 3px 0 rgb(21, 21, 21);
+$half-shadow: 0 3px rgba(71, 83, 115, 0.2) inset;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  // font-family: "JetBrains Mono", monospace;
+  // font-family: "IBM Plex Sans";
+  font-family: "Mulish";
+}
+html,
+body {
+  scroll-behavior: smooth !important;
+}
+html{
+    font-family: "Red Hat Text", sans-serif;
+}
+body {
+  // min-width: 100vw;
+  overflow-x: hidden;
+  // background: url(https://raw.githubusercontent.com/alleycaaat/frontend-mentor/main/countdown-timer/images/bg-stars.svg);
+  background-color: $bg;
+}
+a {
+  // color: $text;
+  text-decoration: none;
+}
+ul{
+  list-style: none;
+}
+// .wrapper{
+//     min-width: 1536px;
+//     margin-left: auto;
+//     margin-right: auto;
+//     padding-left: 200px;
+//     padding-right: 200px;
+// }
+// .container {
+//   margin: 20px;
+// }
+
+html {
+  scrollbar-color: $purple;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $stext;
+  border-radius: 10px;
+}
+@media screen and (max-width: 765px) {
+  ::-webkit-scrollbar {
+    display: none;
+  }
+}

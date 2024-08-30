@@ -1,0 +1,425 @@
+@import "../../App.scss";
+
+.container {
+  margin-top: 50px;
+  .wrapper {
+    display: flex;
+    gap: 60px;
+    .left {
+      flex: 1;
+    }
+    .right {
+      padding-right: 30px;
+      flex: 3;
+      .filterControls {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .filterButtons {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 20px;
+      }
+
+      .filterButton {
+        background-color: $lbg;
+        color: $ltext;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        border-radius: 5px;
+
+        &.active {
+          background-color: $purple;
+        }
+      }
+      // .signals {
+      //   display: grid;
+      //   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      //   gap: 20px;
+      // }
+
+      // .signal {
+      //   background-color: $lbg;
+      //   border-radius: 8px;
+      //   border: 1px solid transparent;
+      //   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      //   // width: calc(50% - 10px);
+      //   margin-bottom: 20px;
+      //   transition: all 0.3s;
+      //   padding: 15px;
+
+      //   &:hover {
+      //     background: rgb(137, 44, 220);
+      //     background: linear-gradient(
+      //       0deg,
+      //       rgba(137, 44, 220, 0.5215336134453781) 0%,
+      //       rgba(188, 111, 241, 0) 71%
+      //     );
+      //     border: 1px solid $purple;
+      //     // transform: scale(1.03);
+      //     // .btn button{
+      //     //   background-color: $lbg;
+      //     // }
+      //   }
+
+      //   .header {
+      //     display: flex;
+      //     justify-content: space-between;
+      //     align-items: center;
+      //     margin-bottom: 10px;
+
+      //     h3 {
+      //       font-size: 18px;
+      //       color: $purple;
+      //       margin: 0;
+      //     }
+      //   }
+
+      //   .body {
+      //     .rules{
+      //       display: flex;
+      //       flex-direction: column;
+      //     }
+      //     p {
+      //       margin: 5px 0;
+
+      //       .label {
+      //         font-weight: 600;
+      //         margin-right: 5px;
+      //         color: $ltext;
+      //       }
+      //       .labelAns {
+      //         font-weight: 400;
+      //         color: $stext;
+      //         margin-right: 5px;
+      //       }
+      //       .labelAnsRule {
+      //         font-weight: 400;
+      //         font-size: .7rem;
+      //         color: $stext;
+      //         margin-right: 5px;
+      //         text-transform: capitalize;
+      //       }
+      //     }
+      //   }
+      //   .btn button{
+      //     width: 100%;
+      //     background-color: $purple;
+      //     color: $ltext;
+      //     border: none;
+      //     padding: 10px 20px;
+      //     cursor: pointer;
+      //     border-radius: 5px;
+      //     font-weight: 700;
+      //     margin-top: 15px;
+      //   }
+      // }
+      .courses {
+        display: grid;
+        justify-content: center;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 20px;
+      }
+      .course {
+        position: relative;
+        border-radius: 14px;
+        background-color: $lbg;
+        transition: all 0.2s linear;
+      }
+      .course:hover {
+        // transform: scale(1.02);
+        // box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      }
+      .courseImage {
+        // width: fit-content;
+      }
+      .courseImage img {
+        border-top-right-radius: 14px;
+        height: 80px;
+        object-fit: contain;
+        border-top-left-radius: 14px;
+        width: 100%;
+      }
+      .courseContent {
+        padding: 10px;
+        .courseContentWrapper {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 10px;
+        }
+      }
+      .modules {
+        display: flex;
+        align-items: center;
+        gap: 3px;
+      }
+      .courseCategory {
+        padding: 10px;
+        border-radius: 3px;
+        background-color: $lightBG;
+      }
+      .courseCategory > p {
+        display: flex;
+        align-items: center;
+        gap: 3px;
+        font-size: 0.6rem;
+        color: $purple;
+        font-weight: 500;
+      }
+      .modules {
+        background-color: $lightBG;
+        padding: 7px;
+        border-radius: 50%;
+        font-size: 0.8rem;
+        color: $purple;
+      }
+      .courseTitle {
+        display: flex;
+        flex-direction: column;
+      }
+      .courseTitle p:nth-child(1) {
+        font-size: 1.2rem;
+        font-weight: 800;
+        color: $text;
+      }
+      .courseTitle p:nth-child(2) {
+        margin-top: 10px;
+        font-size: 0.8rem;
+        color: $ltext;
+        font-weight: 200;
+      }
+      .enroll {
+        padding-block: 20px 10px;
+        border-top: 1px solid $purple;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .enroll > p {
+        background-color: transparent;
+        border: 1px solid $purple;
+        padding: 5px 10px;
+        border-radius: 3px;
+        font-size: 0.67rem;
+        font-weight: 600;
+        color: $purple;
+      }
+      .launchDate {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        top: 10px; /* Adjust as needed */
+        right: 10px; /* Adjust as needed */
+        font-size: 0.6rem;
+        background-color: $purple; /* Semi-transparent white background */
+        color: $ltext;
+        font-weight: 600;
+        border-radius: 3px;
+        line-height: 1.1;
+        box-shadow: 0 0 5px $purple;
+        padding: 5px;
+        // animation: blink 3s infinite;
+      }
+      @keyframes blink {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.1);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+      .bottomItem {
+        background-image: url("/sheroBg.png");
+        background-color: $lightBG;
+        width: 100%;
+        padding: 10px;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 10px;
+      }
+
+      .exchanges {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 10px;
+        p {
+          text-transform: uppercase;
+          background-color: $purple;
+          border-radius: 3px;
+          font-size: 0.6rem;
+          font-weight: 600;
+          padding: 5px;
+          color: $ltext;
+        }
+      }
+      .note {
+        margin-bottom: 10px;
+        display: flex;
+        gap: 10px;
+        p {
+          text-transform: uppercase;
+          background-color: $purple;
+          border-radius: 3px;
+          font-size: 0.6rem;
+          font-weight: 600;
+          padding: 5px;
+          color: $ltext;
+        }
+      }
+      .finalStatus {
+        margin-bottom: 10px;
+        display: flex;
+        gap: 10px;
+        p {
+          text-transform: uppercase;
+          border-radius: 3px;
+          font-size: 0.6rem;
+          padding: 5px;
+          color: $ltext;
+        }
+        button {
+          cursor: pointer;
+          border: none;
+          text-transform: uppercase;
+          background-color: $purple;
+          border-radius: 3px;
+          font-size: 0.6rem;
+          font-weight: 800;
+          padding: 5px;
+        }
+      }
+      .bottomBoxItem {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: 200;
+        font-size: 0.8rem;
+        color: $text;
+      }
+      .enroll button {
+        border: none;
+        font-size: 0.7rem;
+        font-weight: 700;
+        border-radius: 3px;
+        max-width: fit-content;
+        background-color: $purple;
+        color: $ltext;
+        padding: 5px 10px;
+        cursor: pointer;
+      }
+    }
+  }
+}
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+
+  .pageButton {
+    background-color: $lbg;
+    color: $ltext;
+    border: none;
+    padding: 8px 12px;
+    margin: 0 5px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    &:hover {
+      background-color: $lbg;
+    }
+
+    &.active {
+      background-color: $purple;
+      color: $ltext;
+    }
+  }
+}
+.noData {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: $greyBlue;
+  i {
+    font-size: 50px;
+  }
+}
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: $ltext;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  h4 {
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  .fields {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    input,
+    select {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: $ltext;
+    }
+  }
+}
+
+.popupButtons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.popup button {
+  background-color: $purple;
+  color: $ltext;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.popup button:hover {
+  background-color: #e0a029;
+}
+
+@media screen and (max-width: 850px) {
+  .container {
+    margin: 20px 10px 50px 10px;
+    .wrapper {
+      gap: 40px;
+      flex-direction: column;
+      .right {
+        padding: 0px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .container {
+    .wrapper {
+      .right {
+        width: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,41 @@
+@import "../../App.scss";
+
+.sidebarItems{
+    display: flex;
+    flex-direction: column;
+    .active{
+        background-color: $lbg;
+    }
+    .sidebarItem{
+        cursor: pointer;
+        color: $stext;
+        padding: 20px;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+        
+        &:hover{
+            color: $purple;
+        }
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .sidebarItems{
+        display: none;
+        .active{
+            border-bottom: 2px solid $purple;
+        }
+        justify-content: center;
+        flex-direction: row;
+        .sidebarItem{
+            gap: 5px;
+            background-color: transparent;
+            border-radius: 0px;
+            padding-inline:12px ;
+        }
+    }
+}

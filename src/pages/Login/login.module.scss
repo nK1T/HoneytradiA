@@ -1,0 +1,123 @@
+@import "../../App.scss";
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-block: 20px;
+  .wrapper {
+    border: 1px solid $greyBlue;
+    border-radius: 24px;
+    // min-height: 500px;
+    padding: 30px;
+    width: 400px;
+    .top {
+      h2 {
+        display: flex;
+        align-items: center;
+        color: $purple;
+        margin-bottom: 40px;
+        img {
+            margin-top: 4px;
+            height: 25px;
+        }
+    }
+    p {
+        color: $purple;
+        font-weight: 600;
+        font-size: 2rem;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+}
+    .formField {
+      margin-bottom: 15px;
+      .inputLabel {
+        display: flex;
+        align-items: center;
+        gap: 3px;
+        font-weight: 700;
+        font-size: 0.9rem;
+        margin-bottom: 5px;
+        color: $stext;
+      }
+      .inputField {
+        font-weight: 700;
+        border-style: solid;
+        border-color: rgb(192, 192, 192);
+        border-radius: 10px;
+        width: 100%;
+        padding: 12px;
+        outline: none;
+      }
+    }
+    p {
+      font-size: 0.8rem;
+      font-weight: 400;
+      line-height: 22px;
+      color: $stext;
+    }
+    .error {
+      margin-top: 5px;
+      font-size: 0.7rem;
+    }
+    .btn {
+      cursor: pointer;
+      color: $stext;
+      background-color: $purple;
+      border: none;
+      margin-top: 10px;
+      border-radius: 10px;
+      height: 48px;
+      width: 100%;
+      font-weight: 700;
+      font-size: 16px;
+      transition: all 0.1s ease-in;
+      &:hover {
+        background-color: $purple;
+        box-shadow: 0 0 10px 3px rgba(255, 251, 251, 0.241);
+      }
+    }
+    .register {
+      margin-top: 5px;
+      margin-left: 3px;
+    }
+  }
+}
+.passwordField {
+  display: flex;
+}
+.inputPasswordField {
+  border: 1px solid rgba(0, 0, 0, 0.258);
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  width: 100%;
+  padding: 12px;
+  outline: none;
+  border-right: none;
+  &:focus {
+    border-color: $purple;
+  }
+}
+.passwordShowBtn {
+  cursor: pointer;
+  border: none;
+  border: 1px solid rgba(0, 0, 0, 0.258);
+  border-left: none;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding: 10px;
+  background-color: $purple;
+  color: $ltext;
+}
+
+@media only screen and (max-width: 750px) {
+  .container{
+    .wrapper{
+      width: 100%;
+      margin: 10px;
+      border: none;
+      padding: 0px;
+    }
+  }
+}
