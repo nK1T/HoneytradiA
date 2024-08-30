@@ -81,7 +81,11 @@ const Signals = () => {
         setSignals((prevSignals) =>
           prevSignals.map((signal) =>
             signal._id === signalId
-              ? { ...signal, finalStatus: popupData.finalStatus, finalStatusPercent: popupData.finalStatusPercent }
+              ? {
+                  ...signal,
+                  finalStatus: popupData.finalStatus,
+                  finalStatusPercent: popupData.finalStatusPercent,
+                }
               : signal
           )
         );
@@ -307,7 +311,11 @@ const Signals = () => {
               {currentSignals.map((course) => (
                 <div key={course._id} className={styles.course}>
                   <div className={styles.courseImage}>
-                    <img src="binance.png" loading="lazy" />
+                    <img
+                      src={`${course.coinName.split("/")[0]}.png`}
+                      loading="lazy"
+                      alt={course.coinName.split("/")[0]}
+                    />
                   </div>
                   <div className={styles.launchDate}>
                     <p>{formatDate(course.createdAt)}</p>

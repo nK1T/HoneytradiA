@@ -318,6 +318,9 @@
   td {
     padding: 12px;
     text-align: left;
+    white-space: nowrap; // Prevent text from wrapping
+    overflow: hidden; // Hide overflowed content
+    text-overflow: ellipsis; // Show ellipsis (...) for overflowed content
   }
   td {
     border-bottom: 1px solid $desatBlue;
@@ -445,6 +448,15 @@
     .wrapper {
       .right {
         width: 100%;
+        .membershipTable{
+          overflow-x: auto;
+          max-width: 100%;
+          margin-top: 20px;
+          width: 100%;
+          border-collapse: collapse;
+          scrollbar-width: thin;
+          scrollbar-color: $purple transparent;
+        }
       }
     }
   }
